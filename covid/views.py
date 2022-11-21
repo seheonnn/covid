@@ -11,4 +11,15 @@ def covid19_API(n):
 
 def home(request):
     value = covid19_API(1)[0]
-    return render(request, 'home.html', {'value': value})
+    year = covid19_API(365) # 365일치 데이터 가져옴
+    year_data = []
+
+    for data in year:
+        date = data['S_DT']
+        confirmed = data['N_HJ']
+        year_data.append([date, int(confirmed)])
+    week_data = year_data[:7]
+    week_data.reverse()
+    year_data.reverse()
+    return render(request, 'home.html', {'value': value, 'week_data': week_data, 'year_data':year_data})
+# 프론트로 보내기 {}부분
