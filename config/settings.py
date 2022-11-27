@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-$5@3%q$-i*+hz77*yx#cnu%%c&&cr@vkl3j=y8=ofme+fjcsok
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*'] # 기본 url 설정
 
 
 # Application definition
