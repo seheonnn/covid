@@ -22,4 +22,4 @@ def home(request):
     week_data.reverse()
     year_data.reverse()
     return render(request, 'home.html', {'value': value, 'week_data': week_data, 'year_data':year_data})
-# 프론트로 보내기 {}부분
+    # {}부분 : 프론트로 보내기
